@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.list1 {
+  font-size: 20px;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  
+  
+}

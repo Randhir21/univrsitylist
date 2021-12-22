@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import university from './university.json';
+import List from '@material-ui/core/List';
+import Link from '@material-ui/core/Link';
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        university.map((curElem)=>{
+            return(
+              <div >
+              <List className='list1'>
+               
+                  <Link href={curElem.web_pages}>{curElem.name}-- {curElem.country}</Link>
+                
+              </List>
+              </div>
+            );
+        })
+      }
     </div>
   );
 }
